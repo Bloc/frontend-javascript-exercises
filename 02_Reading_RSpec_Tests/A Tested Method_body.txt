@@ -1,0 +1,9 @@
+This exercise will give you a chance to create a method and have it tested. This is the same exercise that you did in the "Methods" exercise from the previous checkpoint.
+
+Write a method that returns a valid HTML link tag, given the link's text and URL.
+
+To complete this exercise, review the test specification below to figure out what the name of the method should be and how the arguments should be ordered. For example, the specification is looking for a method named `link_to`, so this should be the name of your method. When you pass `link_to` some "text" and an "address", the method should return a string containing a valid HTML link tag (eg, `"<a href='http://www.example.com'>Click here!</a>"`)
+
+> Remember that the RSpec test specification below is run automatically when you click the "run" button. It asserts that the code you entered in the editor returns the expected result that it described. You don't need to copy the RSpec code into the editor, it's simply run for you.
+
+***

@@ -1,0 +1,140 @@
+In this exercise you are going to re-implement the `map` method, similar to how you re-implemented the `new_each` method in the Blocks checkpoint. To accomplish this you'll want to add two methods to the `Array` class: `new_map` and `new_map!`. The second method, with the "bang" (i.e. the exclamation point) will persist a change to the array which receives the method. The "bang" convention is used across the Ruby language.
+
+Let's get started with the regular (non-bang) `new_map` method. Since this is a re-implementation exercise, we'll have to open up the `Array` class and define a new method:
+
+```ruby
+class Array
+  def new_map
+  end
+end
+```
+
+As you know from the previous exercise, the `map` method iterates over an array, and replaces each element with whatever the block returns. To refresh your memory:
+
+```ruby
+a = ["a", "b", "c"]
+
+a.map { |item| item + "!" }  #=> ["a!", "b!", "c!"] (the changes to the array only exist when the method is called.)
+
+a #=> ["a", "b", "c"] (the changes to the array are not persisted in the non-bang version of map)
+```
+
+The first step in re-implementing `map` should be to iterate over the array which receives `new_map`:
+
+```ruby
+class Array
+  def new_map
+    self.each do |item|
+    end    
+  end
+end
+```
+
+We're off to a good start. We've opened the `Array` class and defined a `new_map` method. We are also iterating over the array which receives the `new_map` method by calling:
+
+```ruby
+    self.each do |item|
+```
+
+Remember that `self` is the array that `new_map` is being called on. We often refer to this as "the array which receives the new_map method." In other words, the array below, `[1,2,3,4,5]`, becomes `self` in our re-implemented `new_map` method:
+
+```ruby
+[1,2,3,4,5].new_map { }
+```
+
+Now, back to our `new_map` implementation. Since the `map` method replaces the elements of a given (i.e. `self`) array, we need a way to capture those changes. Let's create a new array that will hold the changes that will be specified in the `new_map` block:
+
+```ruby
+class Array
+  def new_map
+    a = []
+    self.each do |item|
+      # populate the new "a" array here
+    end
+    a # return the newly populated array from the new_map method
+  end
+end
+```
+
+Now we have the basic structure of the method. The only missing part is the code within the `each` block. Remember, the `new_map` method takes a block argument, like this:
+
+```ruby
+["a", "b"].map { |item| item + "!" } # the code between the curly brackets is the block argument
+```
+
+How do we access a block argument in our method? You may want to take a look back at the Blocks checkpoint if you're not sure, but we'll give you a hint anyway. Ruby's `yield` method invokes a block argument. Use `yield` to build the `a` array in the `each` block:
+
+```ruby
+class Array
+  def new_map
+    a = []
+    self.each do |item|
+      # use yield here and build the a array with every iteration of the each method
+    end
+    a
+  end
+end
+```
+
+> Remember, the shovel operator (`<<`) is an elegant way to build an array.
+
+***
+
+We also need to create a `new_map!` (bang!) method that persists a change to the array it's called on. Again, let's start by setting up a simple structure for this method, in the `Array` class:
+
+```ruby
+class Array
+  def new_map
+    # You should have already implemented this method
+  end
+
+  def new_map!
+  end
+end
+```
+
+> Note, you can define this method in the same class definition as `new_map`.
+
+If you successfully implemented the `new_map` method, you're very close to having a working `new_map!` (bang) method. The `new_map` (non-bang) method does everything we need `new_map!` to do, _except_ persist the changes to the array. We could repeat the code from `new_map` as a starting point, but that wouldn't be very efficient, or DRY (do not repeat yourself) as most developers say. Let's update the `new_map!` method by calling `new_map` on `self`:
+
+```ruby
+class Array
+  def new_map!
+    self.new_map
+  end
+end
+```
+
+The call to `new_map` on `self` should look a little strange to you, because we're not passing a block argument to `new_map`. Without a block argument, `new_map` won't know what to do to the array (`self`). Basically, we want to take a block argument passed to the `new_map!` (bang), and use it _again_ with `new_map` (non-bang). Ruby provides a way to **reuse** blocks, by converting them into objects that can be passed around like Strings, Integers or Booleans. Let's take a look at the syntax to reuse a block:
+
+```ruby
+class Array
+  def new_map!(&block)
+    self.new_map(&block)
+  end
+end
+```
+
+By placing an `&` in front of the argument named `block`, you are telling Ruby to treat it like a reusable object. This means that if `new_map!` (bang) is called like this:
+
+```ruby
+[1,2,3].new_map! { |num| num * 5 }
+```
+
+> Note, the argument does not need to be named "&block", it could be named anything, as long as it has a `&` to signify that it should be converted to an object.
+
+This block argument `{ |num| num * 5 }` will be reused when `new_map` (non-bang) is called on `self` within the `new_map!` (bang) method.
+
+Unfortunately, we're still not doing anything differently than the original `new_map` method though. We've simply found another, less direct way of calling it. Again, the bang designation in Ruby means that the method should persist a change to the object it was called on. Basically, we need to save the change that is defined in the block argument. Ruby has a helpful method for this, named `replace`. The `replace` method replaces the array it's called on, with the array that's passed to it. Consider the following example, using `replace`:
+
+```ruby
+numbers = [1,2,3]
+letters = ["a", "b"]
+
+numbers.replace(letters)
+
+p numbers
+#=> ["a", "b"]
+```
+
+Use the `replace` method to persist the change that is defined in the block argument, and complete `new_map!` implementation.

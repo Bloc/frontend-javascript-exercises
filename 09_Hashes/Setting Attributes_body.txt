@@ -1,0 +1,50 @@
+Create a class named `User`. Its `initialize` method should take a `Hash` as an argument. We'll name the argument `config` and default its object type to be a `Hash`:
+
+```ruby
+class User
+  def initialize(config = {})
+  end
+end
+```
+
+The `config` argument should be used to set any of the following attributes: `name`, `email`, `bio`, `age`, and `sex`. If an attribute is not provided in the `Hash` argument, the `initialize` method should default it to a value to `"n/a"`. For example:
+
+```ruby
+class User
+  def initialize(config = {})
+    @name = config[:name] || "n/a"
+    @email = config[:email] || "n/a"
+    ...
+  end
+end
+```
+
+> Hint: setting default values is a very common task in Ruby. A good way to do this is with the `||` assignment operator. Consider the following examples:
+
+```ruby
+a = 3
+a = a || 6
+a #=> 3
+b = b || 9
+b #=> 9
+```
+
+> See if you can decode the logic in the conditional assignments above.
+
+We'll also need to access the instance variables set in our `initialize` method. We can use the handy `attr_accessor` method declaration to do this. The `attr_accessor` method also lets you declare multiple attributes on one line. For example:
+
+```ruby
+class User
+  attr_accessor :name, :email
+
+  def initialize(config = {})
+    @name = config[:name] || "n/a"
+    @email = config[:email] || "n/a"
+    # ...
+  end
+end
+```
+
+Finish writing the `User` class and `initialize` method to handle all of the required attributes.
+
+***

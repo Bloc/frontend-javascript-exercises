@@ -1,0 +1,107 @@
+To this point, you've written code as individual and standalone lines of syntax. If you wanted to reuse a line of code in this respect, you'd have to type it in again. A method is a thing in programming where you can write code, and reuse it by calling the method rather than retyping the lines of code. Before exploring methods, take note of two common terms used around methods in programming:
+
+* **Call** - run or execute a method.
+* **Define** - compose or write a method.
+
+Methods have a structure that must be used to define them. Write your first method by typing:
+
+```ruby
+def hello
+  "Hello world"
+end
+```
+
+A method definition begins with `def` and ends with `end`. `def` stands for "define" and initiates a section of code, which, in the case above is simply `"Hello world"`. In some languages, such as Javascript, sections of code are designated with curly brackets (`{ }`). You'll get a chance to code Javascript towards the end of the apprenticeship.
+
+The name of our method is `hello`. The method name is whatever word is placed to the right of `def`. To call (i.e. execute) a method, you simply type the name of the method. By calling the method after `p` you are instructing the computer to execute the code written in the `hello` method, and print it to the screen with `p`.
+
+```ruby
+p hello
+```
+
+When you code in an editor, like Sublime, the lines of code will be numbered for you. Lines of code are in between `def` and `end`. For example, the `hello2` method below contains three lines of code. Type the following method in the console:
+
+```ruby
+def hello2
+  a = 1
+  b = 2
+  a + b
+end
+```
+
+In this example `a = 1` is the first line of code and `a + b` is the last line of code. In Ruby, the last line of code in the method is automatically returned by the method. That is, when you call the method `hello2` it will return `3`. Try it out:
+
+```ruby
+p hello2
+```
+
+## Interacting with Methods
+You can interact with methods by providing them with information. Consider two more terms around methods:
+
+* **Pass** - provide a method with something.
+* **Argument** - something that is passed to a method.
+
+There are two arguments that are being passed to the method below. The arguments are named `a` and `b`. Type the following in the console:
+
+```ruby
+def add(a,b)
+  a + b
+end
+```
+
+Arguments are variables that can be used within the method. Notice how you used the `a` and `b` arguments in the method as variables. A method can have any number of arguments, or no arguments at all (as you've seen already).
+
+## Naming Conventions
+Methods and arguments, just like variables, can be named almost anything, though they must start with a letter. That being said, you should always strive to make your code easy to comprehend. You should therefore use method and argument names that provide a context of their purpose. For example, it's easy to understand what the `add` method's purpose is. 
+
+Long method names are fine (and are actually quite common in Rails), but you shouldn't go overboard. For example, it's probably not necessary to name the method `add_two_numbers_together`. While there's nothing technically incorrect about that name, it's simply not necessary and `add` is sufficient in this example. The more you code, the better you will become at naming methods and arguments.
+
+## More on Arguments
+Try calling the `add` method a few times with arguments. Think about how the `a` and `b` arguments are replaced with the numbers specified as arguments.
+
+```ruby
+p add(1,2)
+p add(4,5)
+p add(7,7)
+```
+
+By passing numbers to `add` as arguments, you are dictating the return of the method. You can see how this is much easier than coding individual lines to add two numbers together. Once the method is written, it can be reused at any time with different arguments.
+
+Arguments don't need to be the same type. For example, the method below takes three different types of arguments. (`String`, `Integer`, `Float`)
+
+```ruby
+# p = principal amount
+# r = annual rate of interest
+# t = number of years
+# n = number of times it is compounded
+
+def compound_interest(name, p, r, t, n)
+  a = p * (1 + r/n) ** (n*t)
+  "After #{n} years #{name} will have #{a} dollars!"
+end
+
+p compound_interest("Bob", 100, 0.05, 40, 12)
+p compound_interest("Joe", 250, 0.06, 50, 12)
+```
+
+## Practice
+
+When you start building web apps, you'll use HTML to render information in a browser. For example, an HTML link to Google looks like this:
+
+```html
+<a href="http://google.com">Google</a>
+```
+
+The HTML code above will cause the browser to render a hyper link that looks like this:
+
+<a href="http://google.com">Google</a>
+
+Create a method named `link` which takes two arguments named `address` and `text`. The method should return the HTML code needed to render a clickable link.
+
+> Hint: Your solution will look similar to the last line of code in the `compound_interest` method definition where we are embedding variables into a string. This is called "string interpolation".
+
+A properly implemented `link` method should be called like this:
+
+```ruby
+p link("http://google.com", "Google")
+```

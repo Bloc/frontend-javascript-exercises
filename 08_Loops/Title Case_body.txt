@@ -1,0 +1,5 @@
+This exercise is similar to the `camel_case` method you created in the previous exercise, except that it should have conditional logic. Make sure you read the test specification carefully so you understand the conditional logic to be implemented.
+
+> Hint: you can use the `include?`, `downcase` and `capitalize!` methods should help you solve this problem.
+
+***

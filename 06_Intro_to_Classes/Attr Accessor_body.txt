@@ -1,0 +1,48 @@
+As you know from completing the previous exercise, it can be tedious to write numerous getter and setter methods. Getter and setter methods are so common that Ruby provides a shortcut to create them. The `attr_accessor` method creates a getter and setter method based on an argument. You call the `attr_accessor` with a `Symbol` argument:
+
+```ruby
+class Square
+  attr_accessor :size
+end
+
+s = Square.new
+s.size = 10   # This is the setter
+s.size        #=> 10 # This is the getter
+```
+
+Notice how we have both the getter and setter methods for `size`, because we called:
+
+```ruby
+  attr_accessor :size
+```
+
+> Behold the magic of Ruby! It's actually not magic, just a bit of dynamic programming, but we'll cover that later.
+
+Sometimes you only need the getter, or a setter. In these cases you can use `attr_reader` or `attr_writer`, respectively:
+
+```ruby
+class Circle
+  attr_reader :color
+  attr_writer :diameter
+
+  def make_red
+    @color = "red"
+  end
+
+  def description
+    "This circle has a diameter of #{@diameter} and is #{@color}."
+  end
+end
+
+c = Circle.new
+c.make_red
+c.color    #=> "red"   # Getter (reader)
+c.diameter = 10        # Setter (writer)
+c.description    #=> "This circle has a diameter of 10 and is red."
+```
+
+To complete this exercise, create a class named `Playlist`. It should have attributes for `name`, `author`, and `song_list`. These attributes should readable and writable.
+
+> Hint, you'll only need `attr_accessor` for this exercise, since we want getter and setter methods for each attribute.
+
+***

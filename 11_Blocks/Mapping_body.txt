@@ -1,0 +1,56 @@
+The `map` method is one of the most common methods you'll call on an array, along with `each`.
+
+The `map` method iterates over an array and passes each element to a block, just like `each`. Unlike `each`, the return value of the block is put back into the array and the modified array is ultimately returned.
+
+> Note: the array returned from `map` will only be modified on the return. That is, if you inspect the array again, it will show its prior state. For example:
+
+```ruby
+map_this_array = [1,2,3]
+
+map_this_array.map { |item| item * 5 }
+#=> [5,10,15]
+
+map_this_array
+#=> [1,2,3]
+```
+
+There is also a `map!` variant of the method which will change the array permanently (or until it's changed again). In programming, the exclamation point is known as a "bang". For example:
+
+```ruby
+map_this_array = [1,2,3]
+
+map_this_array.map! { |item| item * 5 }
+#=> [5,10,15]
+
+map_this_array
+#=> [5,10,15]
+```
+
+As with many common tasks in programming, there is a shortcut for the `map` method:
+
+```ruby
+map_this_array = [1,2,3]
+
+map_this_array.map(&:to_s)  #=> ["1", "2", "3"]
+```
+
+This shortcut calls a given method (`to_s`, in this case), as defined by a symbol. In the example above, `:to_s` turned into the `to_s` method and was called on each of the elements in the `map_this_array` array as `map` iterated over `map_this_array`.
+
+Create an `add_two` method that takes an array of numbers and returns an array of strings. For example:
+
+```ruby
+add_two([1,2])
+#=> ["1 + 2 = 3", "2 + 2 = 4"]
+```
+
+You can use string interpolation to format the result properly. Let's define the structure of the `add_two` method:
+
+```ruby
+def add_two(map_this_array)
+  map_this_array { } # map logic goes inside the block argument - remember to interpolate
+end
+```
+
+> By now you know that specs are very picky. Remember to watch your spaces in the interpolated strings! 
+
+***

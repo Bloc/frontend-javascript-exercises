@@ -1,0 +1,35 @@
+Just like an `Array`, the `Hash` class has an `each` method. Unlike the `Array` class, this `each` method takes two block arguments (block arguments are in between pipes (`|a,b|`). The arguments represent the `key` and the `value` respectively.
+
+Create a method named `hash_to_array` that takes a `Hash` argument and returns an `Array` with the key and value displayed as a string. You can start by defining the method, stating the argument, and creating a return variable:
+
+```ruby
+def hash_to_array(h = {})
+  a = []
+end
+```
+
+Just like we mentioned in the requirements, we defined a method named `hash_to_array`, declared an argument (`h`) which is expected to be a `Hash` object, and also created a variable `a`, which will be the `Array` that is returned from the method.
+
+To iterate over the `Hash` argument, you could write:
+
+```ruby
+def hash_to_array(h = {})
+  a = []
+  h.each do |key, value|
+    # build on the "a" array here
+  end
+  # return the "a" array
+end
+```
+
+During each iteration in the `each` block, we should append the key and value of the `h` Hash to the `a` Array. Remember to append them in the form of a string. Remember how to interpolate?
+
+```ruby
+"#{key} is #{value}"
+```
+
+Finish writing the `hash_to_array` method so that it satisfies the specs.
+
+> Read about the Hash's `each` [method](http://ruby-doc.org/core-2.0/Hash.html#method-i-each).
+
+***

@@ -1,0 +1,70 @@
+In this exercise you'll be creating two methods. The first method should be named `sort_by_length`. This method should take an array of strings or hashes as an argument, and sort each element by its length. Let's start by defining the method:
+
+```ruby
+def sort_by_length(sort_this_array)
+end
+```
+
+Ruby's `Array` class has method that will help us implement a solution for the `sort_by_length` method. The `sort` method in Ruby's `Array` class takes a block as an argument and sorts the elements of the array it's called on, according to the logic in the block. Consider the following example using the `sort` method:
+
+```ruby
+letters = [ "d", "a", "e", "c", "b" ]
+
+letters.sort { |x,y| y <=> x }
+#=> ["e", "d", "c", "b", "a"]
+```
+
+In the block passed to `sort`, we're using a "spaceship operator" (`<=>`) to determine the order of the elements. The spaceship operator returns `1`,`0` or `-1` based on the value of the left argument relative to the value of the right argument. For example: `a <=> b` returns:
+
+* `-1` if `a < b`
+* `0` if `a = b`
+* `1` if `a > b`
+
+If no block argument is passed to the `sort` method, a spaceship operator will still be used by default:
+
+```ruby
+letters.sort
+#=> ["a", "b", "c", "d", "e"]
+
+numbers = [2,3,1]
+numbers.sort
+#=> [1,2,3]
+```
+
+We can use the `sort` method, along with a spaceship operator to sort a given array by the length of its elements:
+
+```ruby
+def sort_by_length(sort_this_array)
+  sort_this_array.sort { } # sorting logic goes inside the block argument
+end
+```
+
+> Hint: remember that the array argument - `sort_this_array` is an array made up of strings or hashes. Both strings and hashes have a `length` method.
+
+***
+
+Create another method named `filter` that takes an array of numbers as an argument and returns an array consisting of numbers that are greater than 5. Let's define the method:
+
+```ruby
+def filter(filter_this_array)
+end
+```
+
+Ruby's `Array` class contains a method named `select` that picks the elements of an array, given some logic contained in a block. Consider the following example using `select`:
+
+```ruby
+[1,2,3,4,5].select { |num|  num.even?  }
+#=> [2, 4]
+```
+
+In the example above, we passed a block to `select` that picked the even numbers in the given array (`[1,2,3,4,5]`), and returned the result as an array (`[2,4]`).
+
+We can use the `select` method to return an array consisting of numbers greater than 5:
+
+```ruby
+def filter(filter_this_array)
+  filter_this_array.select { } # filter logic goes inside the block argument
+end
+```
+
+***

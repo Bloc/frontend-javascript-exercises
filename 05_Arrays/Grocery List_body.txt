@@ -1,0 +1,86 @@
+In this exercise we'll create a program that allows you to manage a grocery list. You'll need to create three methods for this program, each of which is detailed below.
+
+The `add_item` method should take two arguments. The first argument is the item you want to add to the list and the second argument is the array (i.e. list) that the item will be added to. Don't add an item to the list if it already exists in the list. For example, you could start with this:
+
+```ruby
+def add_item(item, list)
+
+end
+```
+
+If we were simply adding items to a list, without worrying about if the item is already on the list, we could write:
+
+```ruby
+def add_item(item, list)
+  list << item
+  list # this is what we return from the method
+end
+```
+
+The tricky part is adding the logic to ensure that we're not adding the same `item` twice. There's a method in Ruby's `Array` class that will be helpful here - it's called `include?`, takes an argument, and returns `true` or `false`. For example:
+
+```ruby
+[1,2,3].include?(3) #=> true
+[1,2,3].include?(4) #=> false
+```
+
+Try to use the `include?` method to determine if the given `item` is in the given `list` and complete the `add_item` implementation.
+
+***
+
+The `remove_item` method should also take two arguments - an `item` and a `list`. 
+
+```ruby
+def remove_item(item, list)
+
+end
+```
+
+The implementation is straight forward, simply remove the given `item` from the given `list`. There's a method in Ruby's `Array` class called `delete` that will be helpful here. The `delete` method takes an argument (the thing that you want to delete). If the argument is found in the array, `delete` will remove that item from the array and return the deleted item. If the item is not found in the array, delete will return `nil`. Consider the following example:
+
+```ruby
+numbers = [1,2,3]
+numbers.delete(2)
+p numbers #=> [1,3]
+
+numbers = [1,2,3]
+numbers.delete(4)
+p numbers #=> [1,2,3]
+```
+
+Use the `delete` method to complete the `remove_item` method.
+
+***
+
+The `full_list` method should take a list of items and return the list sorted alphabetically. If there are two of the same items in the list, remove one of the duplicates. To get started, define the method:
+
+```ruby
+def full_list(list) # the list argument is expected to be an array of grocery items
+
+end
+```
+
+Sorting an array in Ruby is really easy. We can use the `sort` method. For example:
+
+```ruby
+list = ["apple", "orange", "banana"]
+p list.sort #=> ["apple", "banana", "orange"]
+```
+
+Note that we also have to remove duplicate items from our list though. Fortunately, Ruby makes that easy as well, with the `uniq` method:
+
+```ruby
+list = ["apple", "apple", "banana"]
+p list.uniq #=> ["apple", "banana"]
+```
+
+Try stringing the `uniq` and `sort` methods together to complete the implementation of the `full_list` method. In Ruby, you can string methods together by calling them in succession. For example, watch what we can do with the `uniq` and `reverse` method:
+
+```ruby
+numbers = [1,2,3,2]
+p numbers.uniq.reverse #=> [3,2,1]
+```
+
+Remember, the `full_list` method should return an array of sorted items, without duplicates.
+
+***

@@ -1,0 +1,20 @@
+When you start writing more code you will be writing `end` a lot - but it can still be easy to forget. Fortunately, the interpreter's job is to let you know when you forget something. The trick with this type of error is to look for every key word that requires an `end`.
+
+Type the following:
+
+```ruby
+def hello
+  "Hello World"
+```
+
+You should see:
+
+```bash
+syntax error, unexpected end-of-input, expecting keyword_end (SyntaxError)
+``` 
+
+A missing `end` is one type of syntax error, but there are others where you might have a missing quotation or a missing closing paranthesis. Anytime you see a syntax error it's because you're either missing or have an extra keyword or character somewhere.
+
+Implement a method that passes the test.
+
+***

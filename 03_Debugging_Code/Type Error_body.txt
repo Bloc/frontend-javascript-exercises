@@ -1,0 +1,11 @@
+Type the following:
+
+```ruby
+def add(a,b)
+  a + " plus " + b
+end
+```
+
+You should see a `String can't be coerced into Fixnum` error. Implement a working method using string interpolation.
+
+***

@@ -1,0 +1,75 @@
+In this exercise you'll be writing 3 methods in total. We'll detail the requirements for each method below.
+
+Before we get started with the method requirements, let's get some exposure to some common methods that are offered in Ruby's `Array` class. The first method we'll look at is named `reverse`. As a Rails programmer, you should get familiar with the documentation in Ruby Docs. For example, take a look at the [Array](http://ruby-doc.org/core-2.0/Array.html) section in Ruby Docs. On the left side of the page you should see a method named `reverse`. (You can do a quick search if you don't see it.) 
+
+You'll notice that there is also a method called `reverse!`. An `!` is also known as a "bang". In Ruby, a method with a `!` at the end of it will change the object it's called on permanently (or until the object is changed again). Here's an example demonstrating the difference between `reverse` and `reverse!`:
+
+```ruby
+numbers = [1, 2, 3]
+
+numbers.reverse
+#=> [3, 2, 1]
+
+numbers
+#=> [1, 2, 3]
+
+numbers.reverse!
+#=> [3, 2, 1]
+
+numbers
+#=> [3, 2, 1]
+```
+
+> Notice how calling `reverse` doesn't actually change the `numbers` array, but calling `reverse!` does.
+
+The first method you'll write is a method named `reverse_plus_one`. It should take one argument - an array - and return the array reversed. Before you reverse the array, take the first element of the array argument and add it to the end of the return array. For example:
+
+```ruby
+def reverse_plus_one(a)
+  a << a.first
+  # return the array, reversed
+end
+```
+
+***
+
+Find the `join` method on the Ruby Docs `Array` page and review its documentation. The `join` method returns a string consisting of the elements of the array it's called on. For example:
+
+```ruby
+[ "a", "b", "c" ].join
+#=> "abc"
+```
+
+The `join` method can also take an argument, which it will insert between each element of the array it's called on:
+
+```ruby
+[ "a", "b", "c" ].join("-")
+#=> "a-b-c"
+```
+
+Define a method named `pluses_everywhere` method that takes one argument - an array - and returns a string with a `+` between each element in the array. Let's get started by defining the method structure, and declaring what we want to do:
+
+```ruby
+def pluses_everywhere(a)
+  # convert the array argument to a string and insert a "+" between each element
+end
+```
+
+***
+
+You'll often need to evaluate the size of an array. Ruby has a method named `length` that returns an integer based on the number of elements in an array. For example:
+
+```ruby
+ 1, 2, 3, 4, 5 ].length
+ #=> 5
+```
+
+Define a method named `array_quantity_plus_one` that takes an array as an argument and returns the number of elements in the given array, plus 1. As always, start by defining the method structure:
+
+```ruby
+def array_quantity_plus_one(a)
+  # return the number of elements in the array argument, plus 1.
+end
+```
+
+***

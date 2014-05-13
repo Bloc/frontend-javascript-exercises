@@ -1,0 +1,19 @@
+Create a method named `new_array`. It should take four arguments and return an array with those same arguments. Start by defining the method structure:
+
+```ruby
+def new_array(a,b,c,d)
+  # return an array consisting of the arguments here
+end
+```
+
+***
+
+Create another method named `first_and_last`. It should take one argument - an array - and return a new array with only the first and last objects of the argument:
+
+```ruby
+def first_and_last(a)
+  # return an array with only the first and last elements of the argument
+end
+```
+
+***

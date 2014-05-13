@@ -1,0 +1,18 @@
+The `NameError` is very similar to the `NoMethod` error. The `NameError` is thrown when the interpreter can't find a declared variable or method that's being called in a program. Very often, this error will be the result of a typo. Type the following in the interpreter, exactly as it's stated below. Click the "Run" button when you're done.
+
+```ruby
+def hello(first, last)
+  "Hello #{firs} #{last}"
+end
+```
+
+You should see the following:
+
+```
+NameError
+undefined local variable or method `firs'....
+```
+
+The error is telling us that it couldn't find a variable named "firs". This is because the variable we declared in the argument list is named "first". Correct the typo and the the method should pass the specs.
+
+***

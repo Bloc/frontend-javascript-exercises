@@ -1,0 +1,13 @@
+This is the easiest error to diagnose, but it's still worth practicing because it's important to see what the errors look like in the context of RSpec.
+
+Don't type anything - just hit "Run". You should see something that looks like:
+
+```bash
+NoMethodError: undefined method `hello' for main:Object
+```
+
+This means that RSpec tried to run invoke the `hello` method but it couldn't find the method definition (because we haven't defined it yet).
+
+Now that you've seen the error, read the test and write a method to make it pass.
+
+***
