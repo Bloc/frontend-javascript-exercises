@@ -25,3 +25,6 @@
 // blocks for Ruby programs. In the next exercise you'll work with more building blocks.
 
 // TODO: < your solution goes here >
+//
+
+module.exports.hello = 1; // This could be any valid JavaScript object. This one exports the variable `hello` with a value of '1'
