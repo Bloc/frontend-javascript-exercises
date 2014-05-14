@@ -18,6 +18,10 @@ mocha spec.js
 
 You should see a failing test, and some feedback that will tell you why the test is failing.
 
-Try to fix the function in [challenge.js](https://github.com/Bloc/frontend-javascript-exercises/blob/master/02-reading-mocha-tests/00-a-tested-function/challenge.js) and run the test again to get more feedback. When you see a green-colored "1 passing" message, you've successfully fixed the `linkTo` method, and have completed this exercise.
+Your challenge is to fix the function in [challenge.js](https://github.com/Bloc/frontend-javascript-exercises/blob/master/02-reading-mocha-tests/00-a-tested-function/challenge.js). 
+
+To edit the code, we'll launch a text editor (probably Sublime) from the current directory (`00-a-tested-function`). Make your changes, save them, then jump back into your terminal to run the test again and get more feedback. 
+
+When you see a green-colored "1 passing" message, you've successfully fixed the `linkTo` method, and have completed this exercise.
 
 Commit your changes and push your code to your repo when you're finished.
