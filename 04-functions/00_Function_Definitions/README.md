@@ -1,0 +1,1 @@
+In this exercise, define a function name `helloWorld` that does not take any arguments and returns "Hello World".
