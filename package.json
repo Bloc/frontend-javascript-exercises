@@ -1,0 +1,13 @@
+{
+  "name": "BlocJSExercises",
+  "version": "0.0.0",
+  "description": "Student javascript exercises",
+  "author": "Bloc",
+  "dependencies": {
+    "mocha": "~1.13.0",
+    "chai": "~1.9.1",
+    "rosie": "0.2.0",
+    "karma-sinon": "1.0.0",
+    "underscore": "1.6.0"
+  }
+}
