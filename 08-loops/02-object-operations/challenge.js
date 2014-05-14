@@ -1,11 +1,11 @@
 
 // TODO: Complete the `copy` function
 // copy should:
-//   - Take one dictionary as an argument.
-//   - Create a new dictionary and copy all of the properties of the input to the new dictionary.
-//   - Return the new dictionary.
+//   - Take one object as an argument.
+//   - Create a new object and copy all of the properties of the input to the new object.
+//   - Return the new object.
 //
-// Ex. copy({name: "Rob"}) returns a new dictionary {name: "Rob"}
+// Ex. copy({name: "Rob"}) returns a new object {name: "Rob"}
 module.exports.copy = function(src) {
   var dest = {};
   for (k in src) {
@@ -31,9 +31,9 @@ module.exports.extend = function(dest, src) {
 
 // TODO: Complete the `hasElems` function.
 // hasKey should:
-//   - Take two arguments the first is a dictionary and the second argument is an array of elements.
+//   - Take two arguments the first is a object and the second argument is an array of elements.
 //   - This function should return true when all of the elements in the array
-//      are keys in the dictionary, false otherwise.
+//      are keys in the object, false otherwise.
 //
 module.exports.hasElems = function(dict, elems) {
   for (var i = 0; i < elems.length; i++) {

@@ -3,7 +3,7 @@ var solution = require('./challenge');
 var _ = require('underscore');
 
 describe("copy", function() {
-  it("should create a new dictionary with a copy of all the data", function() {
+  it("should create a new object with a copy of all the data", function() {
     orig = {name: "Rob"};
     result = solution.copy(orig);
     expect(result).to.not.equal(orig);

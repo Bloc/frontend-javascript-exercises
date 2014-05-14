@@ -30,7 +30,7 @@ describe("getKeys", function() {
     expect(result).to.include('age');
   });
 
-  it("should return an empty array when the dictionary is empty", function() {
+  it("should return an empty array when the object is empty", function() {
     expect(solution.getKeys({})).to.eql([]);
   });
 });
@@ -45,18 +45,18 @@ describe("getValues", function() {
     expect(result).to.include(101);
   });
 
-  it("should return an empty array when the dictionary is empty", function() {
+  it("should return an empty array when the object is empty", function() {
     expect(solution.getValues({})).to.eql([]);
   });
 });
 
 
-describe("dictionaryToArray", function() {
+describe("objectToArray", function() {
   it("should convert a hash into an array of strings", function() {
     hash = { name: "Bob", age: 34 }
     array = [ "name is Bob", "age is 34" ]
 
-    result = solution.dictionaryToArray(hash);
+    result = solution.objectToArray(hash);
     expect(result).to.include("name is Bob");
     expect(result).to.include("age is 34");
   });
@@ -64,14 +64,14 @@ describe("dictionaryToArray", function() {
   it("returns array for longer hash", function() {
     hash = { name: "Joe", age: 34, sex: 'male' }
     array = [ "name is Joe", "age is 34", "sex is male" ]
-    result = solution.dictionaryToArray(hash);
+    result = solution.objectToArray(hash);
     expect(result).to.include("name is Joe");
     expect(result).to.include("age is 34");
     expect(result).to.include("sex is male");
   });
 
   it("returns an empty array when the hash is empty", function() {
-    expect(solution.dictionaryToArray([])).to.eql([]);
+    expect(solution.objectToArray([])).to.eql([]);
   });
 });
 
