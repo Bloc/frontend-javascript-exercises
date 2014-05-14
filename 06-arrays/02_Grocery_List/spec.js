@@ -1,13 +1,13 @@
-var assert    = require("assert");
+var expect    = require("chai").expect;
 var challenge = require("./challenge.js");
 
 describe("addItem", function() {
   it("adds an item to the end of the list", function() {
-    assert.equal(challenge.addItem("banana", ["orange"]), ["orange", "banana"]);
+    expect(challenge.addItem("banana", ["orange"])).to.equal(["orange", "banana"]);
   });
 
   it("doesn't add an item if the list already has it", function() {
-    assert.equal(challenge.addItem("orange", ["orange"]), ["orange"]);
+    expect(challenge.addItem("orange", ["orange"]), ["orange"]);
   });
 });
 
@@ -16,7 +16,7 @@ describe("reverseSortedList", function() {
     list       = [3, 1, 2];
     listSorted = [1, 2, 3];
 
-    assert.equal(challenge.reverseSortedList(list), listSorted);
+    expect(challenge.reverseSortedList(list)).to.equal(listSorted);
   });
 
   it("returns a different list sorted", function() {
@@ -24,7 +24,7 @@ describe("reverseSortedList", function() {
     listSorted    = ["apple", "banana", "orange"];
     reverseSorted = listSorted.reverse();
 
-    assert.equal(challenge.reverseSortedList(list), reverseSorted);
+    expect(challenge.reverseSortedList(list)).to.equal(reverseSorted);
   });
 
   it("returns a list sorted without duplicates", function() {
@@ -32,6 +32,6 @@ describe("reverseSortedList", function() {
     listSorted    = ["apple", "banana", "orange"];
     reverseSorted = listSorted.reverse();
 
-    assert.equal(challenge.reverseSortedList(list), reverseSorted);
+    expect(challenge.reverseSortedList(list)).to.equal(reverseSorted);
   });
 });

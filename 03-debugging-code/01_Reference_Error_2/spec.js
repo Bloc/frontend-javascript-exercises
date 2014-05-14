@@ -1,8 +1,8 @@
-var assert    = require("assert");
+var expect    = require("chai").expect;
 var challenge = require("./challenge.js");
 
 describe("hello", function() {
   it("should return 'Hello first name last name'", function() {
-    assert.equal(challenge.hello("Steve", "Jobs"), "Hello Steve Jobs");
+    expect(challenge.hello("Steve", "Jobs")).to.equal("Hello Steve Jobs");
   });
 });

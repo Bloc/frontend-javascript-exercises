@@ -1,12 +1,12 @@
-var assert    = require("assert");
+var expect    = require("chai").expect;
 var challenge = require("./challenge.js");
 
 describe("hello", function(){
   it("should return 'Hello World' when passed 'World'", function(){
-    assert.equal(challenge.hello("World"), "Hello World");
+    expect(challenge.hello("World")).to.equal("Hello World");
   });
 
   it("should return 'Hello Bob' when passed 'Bob'", function() {
-    assert.equal(challenge.hello("Bob"), "Hello Bob");
+    expect(challenge.hello("Bob")).to.equal("Hello Bob");
   });
 });
