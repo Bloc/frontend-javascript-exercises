@@ -1,5 +1,6 @@
-assert = require('assert');
-solution = require('./challenge');
+var expect = require('chai').expect;
+var solution = require('./challenge');
+var _ = require('underscore');
 
 var hasElements = function(collection, elements) {
   for (var j = 0; j < elements.length; j++) {
@@ -23,14 +24,14 @@ describe("getKeys", function() {
   it("should return an array of all the keys", function() {
     hash = {name: "Rob", age: 101};
     array = ["name", "age"];
-    solutionOutput = solution.getKeys(hash);
+    result = solution.getKeys(hash);
 
-    assert.equal(2, solutionOutput.length)
-    assert(hasElements(solutionOutput, array), "There is a mismatch between the elements you returned and the expected output");
+    expect(result).to.include('name');
+    expect(result).to.include('age');
   });
 
   it("should return an empty array when the dictionary is empty", function() {
-    assert.deepEqual([], solution.getKeys({}));
+    expect(solution.getKeys({})).to.eql([]);
   });
 });
 
@@ -38,39 +39,39 @@ describe("getValues", function() {
   it("should return an array of all the keys", function() {
     hash = {name: "Rob", age: 101};
     array = ["Rob", 101];
-    solutionOutput = solution.getValues(hash);
+    result = solution.getValues(hash);
 
-    assert.equal(2, solutionOutput.length)
-    assert(hasElements(solutionOutput, array), "There is a mismatch between the elements you returned and the expected output");
+    expect(result).to.include('Rob');
+    expect(result).to.include(101);
   });
 
   it("should return an empty array when the dictionary is empty", function() {
-    assert.deepEqual([], solution.getValues({}));
+    expect(solution.getValues({})).to.eql([]);
   });
 });
 
-describe("dictionaryToArray", function() {
 
+describe("dictionaryToArray", function() {
   it("should convert a hash into an array of strings", function() {
     hash = { name: "Bob", age: 34 }
     array = [ "name is Bob", "age is 34" ]
 
-    solutionOutput = solution.dictionaryToArray(hash);
-    assert.equal(2, solutionOutput.length)
-    assert(hasElements(solutionOutput, array), "There is a mismatch between the elements you returned and the expected output");
+    result = solution.dictionaryToArray(hash);
+    expect(result).to.include("name is Bob");
+    expect(result).to.include("age is 34");
   });
 
   it("returns array for longer hash", function() {
     hash = { name: "Joe", age: 34, sex: 'male' }
     array = [ "name is Joe", "age is 34", "sex is male" ]
-    solutionOutput = solution.dictionaryToArray(hash);
-
-    assert.equal(3, solutionOutput.length)
-    assert(hasElements(solutionOutput, array), "There is a mismatch between the elements you returned and the expected output");
+    result = solution.dictionaryToArray(hash);
+    expect(result).to.include("name is Joe");
+    expect(result).to.include("age is 34");
+    expect(result).to.include("sex is male");
   });
 
   it("returns an empty array when the hash is empty", function() {
-    assert.deepEqual([], solution.dictionaryToArray([]));
+    expect(solution.dictionaryToArray([])).to.eql([]);
   });
 });
 

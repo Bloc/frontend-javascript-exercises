@@ -27,7 +27,8 @@ describe("extend", function() {
     result = solution.extend(dest, src);
 
     expect(result).to.have.keys(['name', 'cost', 'uuid']);
-    expect(result['name']).to.eql('Mouse');
+    expect(result).to.have.property('name', 'Mouse');
+    expect(result).to.have.property('cost', '$1,000');
   });
 });
 

@@ -1,40 +1,41 @@
-var assert = require('assert');
+var expect = require('chai').expect;
 var solution = require('./challenge');
+var _ = require('underscore');
 
 describe("sumNumbers", function() {
   it("sums consecutive numbers", function() {
-    assert.equal(6, solution.sumNumbers([1,2,3]));
+    expect(solution.sumNumbers([1,2,3])).to.eql(6);
   });
 
   it("sums random numbers", function() {
-    assert.equal(32, solution.sumNumbers([5,23,4]));
+    expect(solution.sumNumbers([5, 23, 4])).to.eql(32);
   });
 
   it("can be called multiple times and return the correct result.", function() {
-    assert.deepEqual(32, solution.sumNumbers([5,23,4]));
-    assert.deepEqual(320, solution.sumNumbers([50,230,40]));
+    expect(solution.sumNumbers([5, 23, 4])).to.eql(32);
+    expect(solution.sumNumbers([5, 23, 4, 1])).to.eql(33);
   });
 
   it("returns 0 for an empty array", function() {
-    assert.deepEqual(0, solution.sumNumbers([]));
+    expect(solution.sumNumbers([])).to.eql(0);
   });
 });
 
 describe("splitAndLowerCaseString", function() {
   it("should lowercase a single word", function() {
-    assert.deepEqual(['test'], solution.splitAndLowerCaseString("TeST"));
+    expect(solution.splitAndLowerCaseString("TeST")).to.eql(['test']);
   });
 
   it("should split and lowercase comma separated words", function() {
-    assert.deepEqual(['test', 'test', 'rest'], solution.splitAndLowerCaseString("TeST,tESt,rEst"));
+    expect(solution.splitAndLowerCaseString("TeST,tESt,rEst")).to.eql(['test', 'test', 'rest']);
   });
 
   it("should lower case an entire string", function() {
-    assert.deepEqual(["this is a test"], solution.splitAndLowerCaseString("This Is A tESt"));
+    expect(solution.splitAndLowerCaseString("This Is A tESt")).to.eql(["this is a test"]);
   });
 
   it("should handle an empty string", function() {
-    assert.deepEqual([''], solution.splitAndLowerCaseString(''));
+    expect(solution.splitAndLowerCaseString('')).to.eql(['']);
   });
 });
 
@@ -42,18 +43,17 @@ describe("splitAndLowerCaseString", function() {
 describe("addIndex", function() {
   it("adds index to an array of numbers", function() {
     inputData = [1, 2, 3];
-    assert.deepEqual(["0 is 1", "1 is 2", "2 is 3"], solution.addIndex(inputData));
+    expect(solution.addIndex(inputData)).to.eql(["0 is 1", "1 is 2", "2 is 3"]);
     // This function shouldn't modify the inputData array
-    assert.deepEqual([1,2,3], inputData);
+    expect(inputData)).to.eql(["0 is 1", "1 is 2", "2 is 3"]);
   });
 
   it("adds index to strings", function() {
-    new_array = ["0 is apple", "1 is banana", "2 is orange"]
-    assert.deepEqual(["0 is apple", "1 is banana", "2 is orange"], solution.addIndex(['apple', 'banana', 'orange']));
+    expect(solution.addIndex(['apple', 'banana', 'orange'])).to.eql(["0 is apple", "1 is banana", "2 is orange"]);
   });
 
   it("should work with a mix of strings and numbers", function() {
-    assert.deepEqual(["0 is My", "1 is 1", "2 is number"], solution.addIndex(['My', 1, 'number']));
+    expect(solution.addIndex(['My', 1, 'number'])).to.eql(["0 is My", "1 is 1", "2 is number"]);
   });
 });
 
