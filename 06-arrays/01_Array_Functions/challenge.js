@@ -11,9 +11,7 @@
 //
 // numbers = [1, 2, 3] 
 // numbers.reverse() #=> [3, 2, 1] 
-// numbers           #=> [1, 2, 3]
 //
-// Notice how calling `reverse` doesn't actually change the `numbers` array
 //
 // The first method you'll write is a method named `reversePlusOne`. It should take
 // one argument - an array - and return the array reversed. Before you reverse the

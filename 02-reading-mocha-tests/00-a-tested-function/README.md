@@ -7,7 +7,7 @@ Review the [test specification](https://github.com/Bloc/frontend-javascript-exer
 To run the test, you must first be in the right place. From your terminal:
 
 ```
-$ cd frontend-javascript-exercises/02-reading-mocha-tests/00-a-tested-function
+$ cd ~/frontend-javascript-exercises/02-reading-mocha-tests/00-a-tested-function
 ```
 
 Now, to actually execute the test, type:
