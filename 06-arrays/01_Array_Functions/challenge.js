@@ -45,7 +45,7 @@ module.exports.reversePlusOne = function(a) {
 //
 
 module.exports.plusesEverywhere = function(a) {
-  // convert the array argument to a string and insert a "+" between each element
+  a.join('+');
 };
 
 // You'll often need to evaluate the size of an array. Javascript arrays have an
