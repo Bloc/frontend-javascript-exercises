@@ -4,11 +4,11 @@
 // foo = function() {
 //   return "foo";
 // }
-// 
+//
 // This will not work because our spec file won't be able to find "foo". 
 // Instead, we have to do:
 //
 // module.exports.foo = function() {
 //   return "foo";
-// }  
-//
+// }
+
