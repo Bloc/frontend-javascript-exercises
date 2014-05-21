@@ -19,8 +19,8 @@
 // return array.
 
 module.exports.reversePlusOne = function(a) {
-  a.push(a[0]); // .push adds an element to the end of the array
-  // now return the array, reversed
+  a.push(a[0]);
+  return a.reverse();
 };
 
 // Check out the `join` method in the W3Schools docs:
@@ -43,7 +43,7 @@ module.exports.reversePlusOne = function(a) {
 //
 
 module.exports.plusesEverywhere = function(a) {
-  // convert the array argument to a string and insert a "+" between each element
+  return a.join('+');
 };
 
 // You'll often need to evaluate the size of an array. Javascript arrays have an
@@ -57,5 +57,5 @@ module.exports.plusesEverywhere = function(a) {
 // always, start by defining the function structure:
 
 module.exports.arrayQuantityPlusOne = function(a) {
-  // return the number of elements in the array argument, plus 1.
+  return a.length + 1;
 };
