@@ -13,7 +13,7 @@ var title = "Full Stack Engineering",
 
 describe("createCourse", function() {
   it("creates a course with a title, duration and student list", function() {
-    expect(challenge.createCourse(title, duration, students)).to.equal(course);
+    expect(challenge.createCourse(title, duration, students)).to.eql(course);
   });
 });
 
@@ -23,16 +23,10 @@ var teacherWithProp = {subject: 'Algebra 2', school: 'Berkeley High School', fav
 
 describe("addProperty", function() {
   it("adds a property to an existing object", function() {
-    expect(challenge.addProperty(teacher, 'favoriteStudent', 'Mark')).to.equal({
-      subject: 'Algebra 2',
-      school: 'Berkeley High School',
-      favoriteStudent: 'Mark'
-    });
+    expect(challenge.addProperty(teacher, 'favoriteStudent', 'Mark')).to.eql(teacherWithProp);
   });
 
-  it("sould notify us when a property already exists", function() {
-    expect(challenge.addProperty(teacherWithProp, 'favoriteStudent', 'Mark')).to.equal({
-      console.log("Property already exists.");
-    });
+  it("sould return the object when a property exists", function() {
+    expect(challenge.addProperty(teacherWithProp, 'favoriteStudent', 'Mark')).to.eql(teacherWithProp);
   });
 });

@@ -26,7 +26,7 @@ module.exports.createCourse = function(courseTitle, courseDuration, courseStuden
 // {school: 'Berkeley High School', lastName: 'Smith', firstName: 'Jim'}
 module.exports.addProperty = function(object, newProp, newValue) {
   if (object.newProp) {
-    console.log("Property already exists.");
+    return object;
   } else {
     object[newProp] = newValue;
     return object;
