@@ -1,6 +1,5 @@
 
 
-
 // TODO: Complete the 'formLetter' function.
 // formLetter should:
 //   - Take three strings as arguments: the first name of the recipient, the
@@ -26,3 +25,36 @@ module.exports.formLetter = function(firstName, senderName, message) {
 module.exports.sliceItAndCombineIt = function(bigString, startA, endA, startB, endB) {
   return bigString.substring(startA, endA) + bigString.substring(startB, endB);
 };
+
+
+// TODO: Complete the 'findFirstMatch' function.
+// findFirst shoud:
+//   - Take two strings as arguments. The first string is the one to search, the second is the one to search for.
+//   - Return the position (a.k.a. the index) of the first match of string we're searching for.
+// Ex. findFirst("Roses are red", "re") returns 7 (the position of the "re" in "are").
+module.exports.findFirstMatch = function(text, searchString) {
+  return text.indexOf(searchString);
+};
+
+
+// TODO: Complete the 'findLastMatch' function.
+// findFirst shoud:
+//   - Take two strings as arguments. The first string is the one to search, the second is the one to search for.
+//   - Return the position (a.k.a. the index) of the last match of string we're searching for.
+// Ex. findFirst("Roses are red", "re") returns 10 (the position of the "re" in "red").
+module.exports.findLastMatch = function(text, searchString) {
+  return text.lastIndexOf(searchString);
+};
+
+// TODO: Complete the 'substringBetweenMatches' function.
+// findFirst shoud:
+//   - Take two strings as arguments. The first string is the one to search, the second is the one to search for.
+//   - Return the substring between the first match and the second match.
+//   - Notinclude the first match or the last match in the returned substring.
+// Ex. findFirst("Roses are red, apples are really red.", "red") returns ", apples are really ".
+module.exports.substringBetweenMatches = function(text, searchString) {
+  firstMatchPosition = text.indexOf(searchString) + searchString.length;
+  lastMatchPosition = text.lastIndexOf(searchString);
+  return text.substring(firstMatchPosition, lastMatchPosition);
+};
+
