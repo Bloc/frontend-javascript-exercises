@@ -8,7 +8,10 @@
 // exists in the list. For example, you could start with this:
 
 module.exports.addItem = function(item, list) {
-
+  if (list.indexOf(item) == -1) {
+    list.push(item);
+    return list;
+  }
 };
 
 // If we were simply adding items to a list, without worrying about if the item is
@@ -40,7 +43,7 @@ module.exports.addItem = function(item, list) {
 // alphabetically. To get started, define the function:
 
 module.exports.reverseSortedList = function(list) {
- // the list argument is expected to be an array of grocery items
+  return list.sort().reverse();
 };
 
 // Sorting an array in Javascript is really easy. We can use the `sort` function.

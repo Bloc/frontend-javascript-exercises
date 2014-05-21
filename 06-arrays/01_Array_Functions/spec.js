@@ -3,11 +3,11 @@ var challenge = require("./challenge.js");
 
 describe("reversePlusOne", function() {
   it("creates a new array for a short array", function() {
-    expect(challenge.reversePlusOne([1,2])).to.equal([1,2,1]);
+    expect(challenge.reversePlusOne([1,2])).to.eql([1,2,1]);
   });
 
   it("creates a new array for a longer array", function() {
-    expect(challenge.reversePlusOne([1,2,3,4])).to.equal([1,4,3,2,1]);
+    expect(challenge.reversePlusOne([1,2,3,4])).to.eql([1,4,3,2,1]);
   });
 });
 
