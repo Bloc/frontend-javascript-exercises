@@ -59,32 +59,32 @@ describe("checkLock", function() {
 
 describe("canIGet", function() {
   it("returns the correct results for MacBook Air", function() {
-    expect(challenge.canIGet("MacBook Air", 999)).to.equal(true);
-    expect(challenge.canIGet("MacBook Air", 1000)).to.equal(true);
-    expect(challenge.canIGet("MacBook Air", 998)).to.equal(false);
+    expect(challenge.canIGet("MacBook Air", 999)).to.be.true;
+    expect(challenge.canIGet("MacBook Air", 1000)).to.be.true;
+    expect(challenge.canIGet("MacBook Air", 998)).to.be.false;
   });
 
   it("returns the correct results for MacBook Pro", function() {
-    expect(challenge.canIGet("MacBook Pro", 1299)).to.equal(true);
-    expect(challenge.canIGet("MacBook Pro", 1300)).to.equal(true);
-    expect(challenge.canIGet("MacBook Pro", 1298)).to.equal(false);
+    expect(challenge.canIGet("MacBook Pro", 1299)).to.be.true;
+    expect(challenge.canIGet("MacBook Pro", 1300)).to.be.true;
+    expect(challenge.canIGet("MacBook Pro", 1298)).to.be.false;
   });
 
   it("returns the correct results for Mac Pro", function() {
-    expect(challenge.canIGet("Mac Pro", 2499)).to.equal(true);
-    expect(challenge.canIGet("Mac Pro", 2500)).to.equal(true);
-    expect(challenge.canIGet("Mac Pro", 2498)).to.equal(false);
+    expect(challenge.canIGet("Mac Pro", 2499)).to.be.true;
+    expect(challenge.canIGet("Mac Pro", 2500)).to.be.true;
+    expect(challenge.canIGet("Mac Pro", 2498)).to.be.false;
   });
 
   it("returns correct results for Apple Sticker", function() {
-    expect(challenge.canIGet("Apple Sticker", 1)).to.equal(true);
-    expect(challenge.canIGet("Apple Sticker", 2)).to.equal(true);
-    expect(challenge.canIGet("Apple Sticker", 0)).to.equal(false);
+    expect(challenge.canIGet("Apple Sticker", 1)).to.be.true;
+    expect(challenge.canIGet("Apple Sticker", 2)).to.be.true;
+    expect(challenge.canIGet("Apple Sticker", 0)).to.be.false;
   });
 
   it("returns false for non-Apple products", function() {
-    expect(challenge.canIGet("Dell", 1000000)).to.equal(false);
-    expect(challenge.canIGet("Windows", 10000000)).to.equal(false);
-    expect(challenge.canIGet("Snapple", 10000000)).to.equal(false);
+    expect(challenge.canIGet("Dell", 1000000)).to.be.false;
+    expect(challenge.canIGet("Windows", 10000000)).to.be.false;
+    expect(challenge.canIGet("Snapple", 10000000)).to.be.false;
   });
 });
