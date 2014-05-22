@@ -12,6 +12,6 @@
 // is because the variable we declared in the argument list is named "first".
 // Correct the typo and the function should pass the specs.
 
-module.exports.hello = function(first, last) {   
-  return "Hello " + firs + " " + last 
+module.exports.hello = function(first, last) {
+  return "Hello " + firs + " " + last;
 };

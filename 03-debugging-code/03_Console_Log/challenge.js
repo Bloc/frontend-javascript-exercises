@@ -1,4 +1,4 @@
-// Try running the following code with "mocha spec.js"
+// Try running "mocha spec.js" in this directory
 
 // You should see:
 
@@ -7,7 +7,7 @@
 
 // It would be useful if we could see what the values of a and b. We can use a
 // function called "console.log" to print the values of each variable to our
-// terminal window, like this:
+// terminal window. Modify the below code so that it looks like this:
 
 // module.exports.add = function(a,b) {
 //   console.log("a equals: " + a);
@@ -17,7 +17,7 @@
 //   return a*b;
 // }
 
-// In your terminal window, you should see:
+// In your terminal run "mocha spec.js" again. This time you should see:
 
 // a equals: 1
 // b equals: 2
