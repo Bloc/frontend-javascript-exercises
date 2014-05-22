@@ -30,3 +30,42 @@ describe("notEqual", function() {
     expect(solution.notEqual('bloc','bloc')).to.be.false;
   });
 });
+
+describe("outsideRanges", function() {
+  it("should return true for random numbers outside of ranges", function() {
+    expect(solution.outsideRanges(0)).to.be.true;
+    expect(solution.outsideRanges(7)).to.be.true;
+    expect(solution.outsideRanges(-100)).to.be.true;
+    expect(solution.outsideRanges(100)).to.be.true;
+    expect(solution.outsideRanges(35)).to.be.true;
+  });
+
+  it("should return true for boundary numbers outside all ranges", function() {
+    expect(solution.outsideRanges(1)).to.be.true;
+    expect(solution.outsideRanges(6)).to.be.true;
+    expect(solution.outsideRanges(9)).to.be.true;
+    expect(solution.outsideRanges(21)).to.be.true;
+    expect(solution.outsideRanges(42)).to.be.true;
+  });
+
+  it("should return false for boundary numbers", function() {
+    expect(solution.outsideRanges(10)).to.be.false;
+    expect(solution.outsideRanges(20)).to.be.false;
+    expect(solution.outsideRanges(75)).to.be.false;
+  });
+});
+
+describe("nameAndPrice", function() {
+  it("should return true for our papers and prices greater than or equal to 1.", function() {
+    expect(solution.nameAndPrice("NYTimes", 1)).to.be.true;
+    expect(solution.nameAndPrice("LATimes", 1)).to.be.true;
+  });
+
+  it("should return false for LATimes and price less than 1.", function() {
+    expect(solution.nameAndPrice("LATimes", .5)).to.be.false;
+  });
+
+  it("should return false for NYTimes and price less than 1.", function() {
+    expect(solution.nameAndPrice("NYTimes", .5)).to.be.false;
+  });
+});
