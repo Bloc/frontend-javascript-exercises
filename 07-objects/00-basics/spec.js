@@ -1,0 +1,70 @@
+var expect    = require("chai").expect;
+var challenge = require("./challenge.js");
+var _ = require('underscore');
+
+describe("createCourse", function() {
+  var title = "Full Stack Engineering",
+      duration = "4 weeks",
+      students = ["Rob", "Tim", "Joe"];
+
+  var course = {
+    title: title,
+    duration: duration,
+    students: students
+  };
+
+  it("creates a course with a title, duration and student list", function() {
+    expect(challenge.createCourse(title, duration, students)).to.eql(course);
+  });
+});
+
+
+describe("addProperty", function() {
+  var teacher = null,
+      teacherWithFavoriteStudent = null;
+  beforeEach(function() {
+    teacher = {subject: 'Algebra 2', school: 'Berkeley High School'};
+    teacherWithFavoriteStudent = _.clone(teacher);
+    teacherWithFavoriteStudent.favoriteStudent = 'Mark';
+  });
+
+  it("adds a property to an existing object", function() {
+    expect(challenge.addProperty(teacher, 'favoriteStudent', 'Mark')).to.eql(teacherWithFavoriteStudent);
+  });
+
+  it("sould return the object when a property exists", function() {
+    expect(challenge.addProperty(teacherWithFavoriteStudent, 'favoriteStudent', 'James')).to.eql(teacherWithFavoriteStudent);
+  });
+});
+
+describe("canIGet", function() {
+  it("returns the correct results for MacBook Air", function() {
+    expect(challenge.canIGet("MacBook Air", 999)).to.equal(true);
+    expect(challenge.canIGet("MacBook Air", 1000)).to.equal(true);
+    expect(challenge.canIGet("MacBook Air", 998)).to.equal(false);
+  });
+
+  it("returns the correct results for MacBook Pro", function() {
+    expect(challenge.canIGet("MacBook Pro", 1299)).to.equal(true);
+    expect(challenge.canIGet("MacBook Pro", 1300)).to.equal(true);
+    expect(challenge.canIGet("MacBook Pro", 1298)).to.equal(false);
+  });
+
+  it("returns the correct results for Mac Pro", function() {
+    expect(challenge.canIGet("Mac Pro", 2499)).to.equal(true);
+    expect(challenge.canIGet("Mac Pro", 2500)).to.equal(true);
+    expect(challenge.canIGet("Mac Pro", 2498)).to.equal(false);
+  });
+
+  it("returns correct results for Apple Sticker", function() {
+    expect(challenge.canIGet("Apple Sticker", 1)).to.equal(true);
+    expect(challenge.canIGet("Apple Sticker", 2)).to.equal(true);
+    expect(challenge.canIGet("Apple Sticker", 0)).to.equal(false);
+  });
+
+  it("returns false for non-Apple products", function() {
+    expect(challenge.canIGet("Dell", 1000000)).to.equal(false);
+    expect(challenge.canIGet("Windows", 10000000)).to.equal(false);
+    expect(challenge.canIGet("Snapple", 10000000)).to.equal(false);
+  });
+});
