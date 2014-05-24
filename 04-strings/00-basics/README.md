@@ -1,4 +1,4 @@
-We'll be working on five functions for this execise.
+We'll be working on five functions for this exercise.
 
 - **Complete the formLetter** function. This function should:
     - Take three strings as arguments: the first name of the recipient, the sender's signature name, and the message of the letter
