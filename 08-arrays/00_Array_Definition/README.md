@@ -7,7 +7,7 @@
     newArray(1,2,3,4) // should return [1,2,3,4]
     ```
 
-- Create a function named **firstAndLast**. This function shoud:
+- Create a function named **firstAndLast**. This function should:
    - take one argument, an array with at least 3 elements
    - return a new array with the first and last element of the passed array
 
@@ -17,5 +17,3 @@
    var array = ['one', 3, 'cool' 4];
    firstAndLast(array) // should return ['one', 4]
    ```
-
-
