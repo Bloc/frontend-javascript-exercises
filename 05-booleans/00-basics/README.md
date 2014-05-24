@@ -5,7 +5,7 @@
     
     For example:
     
-    ```
+    ```javascript
     equalStrings('fun', 'fun') // should return true
     equalStrings('bloc', 'boring') // should return false
     ```
@@ -17,7 +17,7 @@
 
     For example:
     
-    ```
+    ```javascript
     notEqual(1, '1') // should return true
     notEqual(1, 1) // should return false
     ```
@@ -28,7 +28,7 @@
 
     For example:
     
-    ```
+    ```javascript
     inBetween(1,3,5) // should return true
     inBetween(3,1,5) // should return false
     ```
@@ -42,7 +42,7 @@
 
     For example:
     
-    ```
+    ```javascript
     outsideRanges(42) // should return true
     outsideRanges(75) // should return false
     ```
@@ -53,7 +53,7 @@
 
     For example:
     
-    ```
+    ```javascript
     nameAndPrice('NYTimes', 1) // returns true
     nameAndPrice('LATimes', 0) // returns false
     nameAndPrice('NYTimes', 0) // returns false
