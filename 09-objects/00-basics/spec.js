@@ -40,8 +40,25 @@ describe("addProperty", function() {
     expect(challenge.addProperty(teacher, 'favoriteStudent', 'Mark')).to.eql(teacherWithFavoriteStudent);
   });
 
-  it("sould return the object when a property exists", function() {
+  it("should return the object when a property exists", function() {
     expect(challenge.addProperty(teacherWithFavoriteStudent, 'favoriteStudent', 'James')).to.eql(teacherWithFavoriteStudent);
+  });
+});
+
+describe("formLetter", function() {
+  var letter = {
+  	recipient: "David",
+  	msg: "What up, thug?",
+  	sender: "Arnold"
+  };
+  var letterStr = "Hello " + letter.recipient + ",\n\n" + letter.msg + "\n\nSincerely,\n" + letter.sender;
+
+  it("should be defined", function() {
+    expect(challenge.formLetter).to.exist;
+  });
+
+  it("should return a properly formatted letter", function() {
+  	expect(challenge.formLetter(letter)).to.eql(letterStr);
   });
 });
 
