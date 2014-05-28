@@ -1,4 +1,4 @@
-- Create a function named **reversePlusOne**. This function should:
+- Create a function named `reversePlusOne`. This function should:
     - Take one argument, an array of at least two numbers.
     - This function should return:
         - the array *reversed* with a `1` added at the front
@@ -10,7 +10,7 @@
     reversePlusOne([5,4,3,2]); // returns [1,2,3,4,5]
     ```
 
-- Create a function named **plusesEverywhere**. This function should:
+- Create a function named `plusesEverywhere`. This function should:
 	- Take one argument, an array of at least two numbers.
 	- This function should return:
 		- a String made of all the values in the array separated by `+`
@@ -22,7 +22,7 @@
 	plusesEverywhere([18,24]); // returns "18+24"
 	```
 	
-- Create a function named **arrayQuantityPlusOne**. This function should:
+- Create a function named `arrayQuantityPlusOne`. This function should:
 	- Take one argument, an array of numbers.
 	- This function should return:
 		- one greater than the number of items in the array

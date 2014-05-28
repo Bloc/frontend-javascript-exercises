@@ -1,11 +1,11 @@
-- Complete the **favoriteNumber** function. This function should:
+- Complete the `favoriteNumber` function. This function should:
     - Take two arguments, the first is the favorite number and the second is a guess at what the favorite number is
     - This function should return:
         - "Too high" if `guess` is greater than `fav` 
         - "Too low" if `guess` is less than `fav` 
         - "You got it!" if `guess` is equal to `fav`
 
-- Complete the **checkLock** function. This function should:
+- Complete the `checkLock` function. This function should:
     - have four arguments that are all numbers
     - return "correct" if the four numbers are a valid combination
     - return "incorrect" if the 4 numbers aren't a valid combination
@@ -23,7 +23,7 @@
     checkLock(5, 2, 45, 10) // returns "incorrect" because the fourth number is between 9 and 20
     ```
 
-- Complete the **canIGet'** function. This function should:
+- Complete the `canIGet` function. This function should:
     - take two arguments:
         - 'item' should represent what the user wants to buy
         - 'money' should represent how many dollars a user has

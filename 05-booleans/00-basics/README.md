@@ -1,4 +1,4 @@
-- Complete the **equalStrings** function. This function should:
+- Complete the `equalStrings` function. This function should:
     - take two arguments, both strings
     - return true if the strings are the same
     - return false if the strings are different
@@ -11,7 +11,7 @@
     ```
 
 
-- Complete the **notEqual** function. This function should:
+- Complete the `notEqual` function. This function should:
     - take two arguments of any type
     - return true unless the two arguments are the same type and are equal to each other
 
@@ -22,7 +22,7 @@
     notEqual(1, 1) // should return false
     ```
 
-- Complete the **inBetween** function. This function should:
+- Complete the `inBetween` function. This function should:
     - take three arguments (all integers), lower, middle, upper
     - return a boolean that tells us whether middle is in between upper and lower
 
@@ -33,7 +33,7 @@
     inBetween(3,1,5) // should return false
     ```
 
-- Complete the **outsideRanges** function. This function should:
+- Complete the `outsideRanges` function. This function should:
     - take one argument, 'number', which is a number
     - return true when the number is:
         - not between 10 and 20, it also can't be 10 or 20 
@@ -47,7 +47,7 @@
     outsideRanges(75) // should return false
     ```
 
-- Complete the **nameAndPrice** function. This function should:
+- Complete the `nameAndPrice` function. This function should:
     - take two arguments: 'name' which is the name of a newspaper, and 'price' which is a number
     - return true if name is 'NYTimes' or 'LATimes', and price is greater than or equal to 1
 

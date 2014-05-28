@@ -1,4 +1,4 @@
-- Create a **helloWorld** function. This function should:
+- Create a `helloWorld` function. This function should:
     - take 0 arguments
     - return a 'Hello World' string
 
@@ -8,7 +8,7 @@
     helloWorld() // returns 'Hello World'
     ```
 
-- Create a **multiply** function. This function should:
+- Create a `multiply` function. This function should:
     - take two arguments, both of them should be numbers
     - return the result of multiplying the two arguments together
 
