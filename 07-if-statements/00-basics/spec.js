@@ -2,6 +2,10 @@ var expect    = require("chai").expect;
 var challenge = require("./challenge.js");
 
 describe("favoriteNumber", function() {
+  it("should be defined", function() {
+    expect(challenge.favoriteNumber).to.exist;
+  });
+
   it("should return 'Too low' if the guess is low", function() {
     expect(challenge.favoriteNumber(10, 1)).to.eql("Too low");
   });
@@ -16,6 +20,10 @@ describe("favoriteNumber", function() {
 });
 
 describe("checkLock", function() {
+  it("should be defined", function() {
+    expect(challenge.checkLock).to.exist;
+  });
+
   it("should return 'correct' for the correct example", function() {
     expect(challenge.checkLock(5, 2, 45, 1)).to.eql("correct");
   });
@@ -58,6 +66,10 @@ describe("checkLock", function() {
 });
 
 describe("canIGet", function() {
+  it("should be defined", function() {
+    expect(challenge.canIGet).to.exist;
+  });
+
   it("returns the correct results for MacBook Air", function() {
     expect(challenge.canIGet("MacBook Air", 999)).to.be.true;
     expect(challenge.canIGet("MacBook Air", 1000)).to.be.true;

@@ -2,6 +2,10 @@ var expect    = require("chai").expect;
 var challenge = require("./challenge.js");
 
 describe("addItem", function() {
+  it("should be defined", function() {
+    expect(challenge.addItem).to.exist;
+  });
+
   it("adds an item to the end of the list", function() {
     expect(challenge.addItem("banana", ["orange"])).to.eql(["orange", "banana"]);
   });
@@ -12,6 +16,10 @@ describe("addItem", function() {
 });
 
 describe("reverseSortedList", function() {
+  it("should be defined", function() {
+    expect(challenge.reverseSortedList).to.exist;
+  });
+
   it("returns a list sorted", function() {
     list       = [3, 1, 2];
     listSorted = [3, 2, 1];

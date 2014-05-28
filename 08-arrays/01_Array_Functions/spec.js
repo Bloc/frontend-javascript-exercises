@@ -2,6 +2,10 @@ var expect    = require("chai").expect;
 var challenge = require("./challenge.js");
 
 describe("reversePlusOne", function() {
+  it("should be defined", function() {
+    expect(challenge.reversePlusOne).to.exist;
+  });
+
   it("creates a new array for a short array", function() {
     expect(challenge.reversePlusOne([1,2])).to.eql([1,2,1]);
   });
@@ -12,6 +16,10 @@ describe("reversePlusOne", function() {
 });
 
 describe("plusesEverywhere", function() {
+  it("should be defined", function() {
+    expect(challenge.plusesEverywhere).to.exist;
+  });
+
   it("returns a single plus for a short array", function() {
     expect(challenge.plusesEverywhere([1,2])).to.equal("1+2");
   });
@@ -22,6 +30,10 @@ describe("plusesEverywhere", function() {
 });
 
 describe("arrayQuantityPlusOne", function() {
+  it("should be defined", function() {
+    expect(challenge.arrayQuantityPlusOne).to.exist;
+  });
+
   it("returns the number of items for a short array plus one", function() {
     expect(challenge.arrayQuantityPlusOne([1,2,3])).to.equal(4);
   });

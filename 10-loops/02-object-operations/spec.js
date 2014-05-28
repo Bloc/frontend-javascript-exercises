@@ -1,21 +1,29 @@
 var expect = require('chai').expect;
-var solution = require('./challenge');
+var challenge = require('./challenge');
 var _ = require('underscore');
 
 describe("copy", function() {
+  it("should be defined", function() {
+    expect(challenge.copy).to.exist;
+  });
+
   it("should create a new object with a copy of all the data", function() {
     orig = {name: "Rob"};
-    result = solution.copy(orig);
+    result = challenge.copy(orig);
     expect(result).to.not.equal(orig);
     expect(result).to.deep.eql(orig);
   });
 });
 
 describe("extend", function() {
+  it("should be defined", function() {
+    expect(challenge.extend).to.exist;
+  });
+
   it("should correctly extends two hashes that are unique", function() {
     dest = { name: "Computer", cost: "$1,000" };
     src = { first_name: "Bob", age: 34 };
-    result = solution.extend(dest, src);
+    result = challenge.extend(dest, src);
 
     expect(result).to.equal(dest, "Returned hash must be the same as the original destination hash.");
     expect(result).to.have.keys(['name', 'cost', 'first_name', 'age']);
@@ -24,7 +32,7 @@ describe("extend", function() {
   it("should correctly extend two hashes that are have keys in common", function() {
     dest = { name: "Computer", cost: "$1,000" };
     src = { name: "Mouse", uuid: "1234" };
-    result = solution.extend(dest, src);
+    result = challenge.extend(dest, src);
 
     expect(result).to.have.keys(['name', 'cost', 'uuid']);
     expect(result).to.have.property('name', 'Mouse');
@@ -39,18 +47,22 @@ describe("hasElems", function() {
     h = { name: "Computer", cost: "$1,000" };
   });
 
+  it("should be defined", function() {
+    expect(challenge.hasElems).to.exist;
+  });
+
   it("returns true for an empty array", function() {
-    expect(solution.hasElems(h, [])).to.be.true;
+    expect(challenge.hasElems(h, [])).to.be.true;
   });
 
 
   it("returns true if it has all the keys", function() {
     keys = ['name', 'name', 'name']
-    expect(solution.hasElems(h, keys)).to.be.true;
+    expect(challenge.hasElems(h, keys)).to.be.true;
   });
 
   it("returns false if one or more of the keys isn't in the hash", function() {
     var keys = ['name', 'bio', 'cost'];
-    expect(solution.hasElems(h, keys)).to.be.false;
+    expect(challenge.hasElems(h, keys)).to.be.false;
   });
 });
