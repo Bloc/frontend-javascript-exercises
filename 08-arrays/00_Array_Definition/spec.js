@@ -2,6 +2,10 @@ var expect    = require("chai").expect;
 var challenge = require("./challenge.js");
 
 describe("newArray", function() {
+  it("should be defined", function() {
+    expect(challenge.newArray).to.exist;
+  });
+
   it("creates an array of numbers", function() {
     expect(challenge.newArray(1,2,3,4)).to.eql([1,2,3,4]);
   });
@@ -16,6 +20,10 @@ describe("newArray", function() {
 });
 
 describe("firstAndLast", function() {
+  it("should be defined", function() {
+    expect(challenge.firstAndLast).to.exist;
+  });
+
   it("creates new array with numbers", function() {
     expect(challenge.firstAndLast([1,2,3])).to.eql([1,3]);
   });

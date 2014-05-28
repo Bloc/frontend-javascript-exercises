@@ -1,7 +1,11 @@
 var expect    = require("chai").expect;
 var challenge = require("./challenge.js");
 
-describe("basicStringOperations", function() {
+describe("formLetter", function() {
+  it("should be defined", function() {
+    expect(challenge.formLetter).to.exist;
+  });
+
   it("should return a properly formated letter", function() {
     result = "Hello Rob,\n\nTake care.\n\nSincerely,\nJoe";
     expect(challenge.formLetter("Rob", "Joe", "Take care.")).to.eql(result);
@@ -14,6 +18,10 @@ describe("sliceItAndCombineIt", function() {
 
   beforeEach(function() {
     bigString = origString;
+  });
+
+  it("should be defined", function() {
+    expect(challenge.sliceItAndCombineIt).to.exist;
   });
 
   it("should not modify the original string", function() {
@@ -43,6 +51,10 @@ describe("sliceItAndCombineIt", function() {
 });
 
 describe("findFirstMatch", function() {
+  it("should be defined", function() {
+    expect(challenge.findFirstMatch).to.exist;
+  });
+
   it("should find a match", function() {
     expect(challenge.findFirstMatch("Roses are red.", "red")).to.eql(10);
 
@@ -54,6 +66,10 @@ describe("findFirstMatch", function() {
 });
 
 describe("findLastMatch", function() {
+  it("should be defined", function() {
+    expect(challenge.findLastMatch).to.exist;
+  });
+
   it("should find a match", function() {
     expect(challenge.findLastMatch("Roses are red.", "red")).to.eql(10);
   });
@@ -63,11 +79,11 @@ describe("findLastMatch", function() {
   });
 });
 
-describe("findLastMatch", function() {
-});
-
-
 describe("substringBetweenMatches", function() {
+  it("should be defined", function() {
+    expect(challenge.substringBetweenMatches).to.exist;
+  });
+
   it("creates the correct substring for the example", function() {
     text = "Roses are red, apples are really red.";
     result = challenge.substringBetweenMatches(text, "red");

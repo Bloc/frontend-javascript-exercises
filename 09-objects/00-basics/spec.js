@@ -13,6 +13,10 @@ describe("createCourse", function() {
     students: students
   };
 
+  it("should be defined", function() {
+    expect(challenge.createCourse).to.exist;
+  });
+
   it("creates a course with a title, duration and student list", function() {
     expect(challenge.createCourse(title, duration, students)).to.eql(course);
   });
@@ -28,6 +32,10 @@ describe("addProperty", function() {
     teacherWithFavoriteStudent.favoriteStudent = 'Mark';
   });
 
+  it("should be defined", function() {
+    expect(challenge.addProperty).to.exist;
+  });
+
   it("adds a property to an existing object", function() {
     expect(challenge.addProperty(teacher, 'favoriteStudent', 'Mark')).to.eql(teacherWithFavoriteStudent);
   });
@@ -38,6 +46,10 @@ describe("addProperty", function() {
 });
 
 describe("canIGet", function() {
+  it("should be defined", function() {
+    expect(challenge.canIGet).to.exist;
+  });
+
   it("returns the correct results for MacBook Air", function() {
     expect(challenge.canIGet("MacBook Air", 999)).to.be.true;
     expect(challenge.canIGet("MacBook Air", 1000)).to.be.true;

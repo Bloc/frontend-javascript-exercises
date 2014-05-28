@@ -22,6 +22,6 @@ Your challenge is to fix the function in [challenge.js](https://github.com/Bloc/
 
 To edit the code, launch a text editor (probably Sublime) from the current directory (`00-a-tested-function`). Make your changes, save them, then jump back into your terminal to run the test again.
 
-When you see a green-colored "1 passing" message, you've successfully fixed the `linkTo` method, and have completed this exercise.
+When you see a green-colored "2 passing" message, you've successfully fixed the `linkTo` method, and have completed this exercise.
 
 Commit your changes and push your code to your repo when you're finished.
