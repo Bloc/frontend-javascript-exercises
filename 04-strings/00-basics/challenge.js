@@ -1,10 +1,19 @@
-module.exports.formLetter = undefined;
+module.exports.formLetter = function(firstName, senderName, message) {
 
-module.exports.sliceItAndCombineIt = undefined;
+};
 
-module.exports.findFirstMatch = undefined;
+module.exports.sliceItAndCombineIt = function(bigString, startA, endA, startB, endB) {
 
-module.exports.findLastMatch = undefined;
+};
 
-module.exports.substringBetweenMatches = undefined;
+module.exports.findFirstMatch = function(text, searchString) {
 
+};
+
+module.exports.findLastMatch = function(text, searchString) {
+
+};
+
+module.exports.substringBetweenMatches = function(text, searchString) {
+
+};
