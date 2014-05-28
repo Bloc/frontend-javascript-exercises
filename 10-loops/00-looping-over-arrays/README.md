@@ -1,4 +1,4 @@
-- Complete the **sumNumbers** function. This function should:
+- Complete the `sumNumbers` function. This function should:
     - return the sum of all numbers inside of the array that is passed to the function
     - if the array is empty, this function should return 0
 
@@ -8,7 +8,7 @@
     sumNumbers([1, 2, 3]) // should return 6
     ```
 
-- Complete the **splitAndLowerCaseString** function. This function should:
+- Complete the `splitAndLowerCaseString` function. This function should:
     - split the `inputString` argument into an array of strings by commas
     - return an array with the set of split strings in lowercase format
 
@@ -22,7 +22,7 @@
 
     > Hint: You should use the built-in string functions `split` and `toLowerCase`.
 
-- Complete the **addIndex** function. This function should:
+- Complete the `addIndex` function. This function should:
     - create and return a new array of all inputs as strings
     - each of the new strings should start with "[index] is [data element at index]"
 
