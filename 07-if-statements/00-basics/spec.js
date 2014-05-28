@@ -32,8 +32,8 @@ describe("checkLock", function() {
   });
 
   it("should return 'incorrect' for incorect second number", function() {
-    expect(challenge.checkLock(5, 2, 5, 10)).to.eql("incorrect");
-    expect(challenge.checkLock(5, 2, 1, 10)).to.eql("incorrect");
+    expect(challenge.checkLock(5, 1, 50, 1)).to.eql("incorrect");
+    expect(challenge.checkLock(5, 20, 50, 1)).to.eql("incorrect");
   });
 
 
