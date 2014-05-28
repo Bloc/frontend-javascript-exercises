@@ -1,4 +1,4 @@
-- Complete the **createCourse** function. This function should:
+- Complete the `createCourse` function. This function should:
     - take three arguments that will define course properties
         - courseTitle (string)
         - courseDuration (string)
@@ -11,7 +11,7 @@
     // should return {title: 'Bloc Front-End Engineering', duration: '4 weeks', students: ['Joe', 'Tim', 'Rob']}
     ```
 
-- Complete the **addProperty** function. This function should:
+- Complete the `addProperty` function. This function should:
     - Take three arguments:
         - `object`: an object to add a properties to
         - `newProp`: a property that we want to add to the object
@@ -25,7 +25,7 @@
     addProperty({firstName: 'Rob'}, 'firstName', 'Jim') // should return {firstName: 'Rob'}
     ```
 
-- Complete the **formLetter** function. This function should:
+- Complete the `formLetter` function. This function should:
     - take one argument, a letter, which has three properties `recipient`, `sender`, and `msg`
     - combine the three properties into a single string with an additional greeting and closing
     - insert additional new lines between the greeting, message, and signature.
@@ -37,7 +37,7 @@
     // should return "Hello James,\n\nThings are well.\n\nSincerely,\nRichard"
     ```
 
-- Complete the **canIGet** function. This function should:
+- Complete the `canIGet` function. This function should:
     - Take two arguments:
         - `item`: represents what the user wants to buy
         - `money`: represents how many dollars a user has
