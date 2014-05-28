@@ -68,4 +68,9 @@ describe("nameAndPrice", function() {
   it("should return false for NYTimes and price less than 1.", function() {
     expect(solution.nameAndPrice("NYTimes", .5)).to.be.false;
   });
+
+  it("should return false for Chicago Tribune and any price.", function() {
+    expect(solution.nameAndPrice("Chicago Tribune", 1)).to.be.false;
+    expect(solution.nameAndPrice("Chicago Tribune", 0.5)).to.be.false;
+  });
 });
