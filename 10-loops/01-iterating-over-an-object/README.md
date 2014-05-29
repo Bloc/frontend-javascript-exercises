@@ -1,14 +1,16 @@
 - Complete the `getKeys` function. This function should:
-    - return an array of each of the keys in the object
+	- accept one argument, an object
+	- return an array of each of the keys in the object
 
     For example:
     
     ```javascript
-    getKeys({name: "Rob", age: 101}) // returns ["name", "age"]
+    getKeys({name: "Rob", age: 101}) // returns ["name", "age"]   
     ```
 
 - Complete the `getValues` function. This function should:
-    - return an array of each of the values in the object
+	- accept one argument, an object
+     - return an array of each of the values in the object
 
     For example:
     
@@ -23,5 +25,5 @@
 
     For example:
     ```javascript
-    objectToArray({name: "Rob"}) // should return ["name is Rob"]
+    objectToArray({name: "Rob", age: 101}) // should return ["name is Rob", "age is 101"]
     ```
