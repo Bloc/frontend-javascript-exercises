@@ -1,5 +1,4 @@
-module.exports.getKeys = undefined;
+module.exports.stream = undefined;
 
-module.exports.getValues = undefined;
+module.exports.sumNumbers = undefined;
 
-module.exports.objectToArray = undefined;

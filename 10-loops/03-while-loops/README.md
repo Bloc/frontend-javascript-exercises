@@ -1,28 +1,33 @@
-- Complete the `getKeys` function. This function should:
-    - return an array of the keys in an object
-    
-    For example:
-    
-    ```javascript
-    getKeys({name: "Rob", age: 101}) // returns ["name", "age"]
-    ```
-
-- Complete the `getValues` function. This function should:
-    - return an array of the values in the object
+- Complete the `stream` function. This function should:
+    - take two arguments, a `conditionalFn` and an `actionFn`.
+    - call `actionFn` until `conditionalFn` returns false.
+    - return nothing.
 
     For example:
-    
+
     ```javascript
-    getValues({name: "Rob", age: 101}) // returns ["Rob", 101]
+    conditionalFn = function() { return false; };
+    actionFn = function() { console.log("Hello!"); };
+    stream(conditionalFn, actionFn); // Prints nothing.
+
+    counter = 10;
+    conditionalFn = function() { 
+      counter--;
+      return counter >= 0; 
+    };
+    stream(conditionalFn, actionFn); // should print "Hello" 10 times.
     ```
 
-- Complete the `objectToArray` function. This function should:
-    - convert an object passed into an array of strings
-    - each string should be in the format of "[key] is [value]" for each key/value pair in the object
-    - if an empty object is passed in, an empty array should be returned
+- Complete the `sumNumbers` function. This function should:
+    - take an array of numbers as an argument.
+    - return the sum of the numbers.
+    - this function should use a `while` loop.
 
     For example:
-    
+
     ```javascript
-    objectToArray({name: "Rob"}) // should return ["name is Rob"]
+    sumNumbers([]); // should return 0.
+
+    sumNumbers([1,2,3,4]); // should return 10.
     ```
+
