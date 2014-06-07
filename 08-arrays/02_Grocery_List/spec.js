@@ -11,7 +11,7 @@ describe("addItem", function() {
   });
 
   it("doesn't add an item if the list already has it", function() {
-    expect(challenge.addItem("orange", ["orange"]), ["orange"]);
+    expect(challenge.addItem("orange", ["orange"])).to.eql(["orange"]);
   });
 });
 
