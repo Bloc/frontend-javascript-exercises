@@ -57,7 +57,7 @@ describe("addIndex", function() {
     inputData = [1, 2, 3, 4];
     expect(challenge.addIndex(inputData)).to.eql(["0 is 1", "1 is 2", "2 is 3", "3 is 4"]);
     // This function shouldn't modify the inputData array
-    expect(inputData).to.eql([1, 2, 3]);
+    expect(inputData).to.eql([1, 2, 3, 4]);
   });
 
   it("adds index to strings", function() {
@@ -68,5 +68,3 @@ describe("addIndex", function() {
     expect(challenge.addIndex(['My', 1, 'number'])).to.eql(["0 is My", "1 is 1", "2 is number"]);
   });
 });
-
-
