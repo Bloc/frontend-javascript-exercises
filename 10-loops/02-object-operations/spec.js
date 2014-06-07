@@ -57,7 +57,7 @@ describe("hasElems", function() {
 
 
   it("returns true if it has all the keys", function() {
-    keys = ['name', 'name', 'name']
+    keys = ['name', 'cost']
     expect(challenge.hasElems(h, keys)).to.be.true;
   });
 
