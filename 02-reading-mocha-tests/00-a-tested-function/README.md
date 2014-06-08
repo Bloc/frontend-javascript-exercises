@@ -20,7 +20,7 @@ You should see a failing test, and some feedback that will tell you why the test
 
 Your challenge is to fix the function in [challenge.js](https://github.com/Bloc/frontend-javascript-exercises/blob/master/02-reading-mocha-tests/00-a-tested-function/challenge.js).
 
-To edit the code, launch Sublime from the current directory (`00-a-tested-function`). Make your changes, save them, then jump back into your terminal to run the test again.
+To edit the code, launch Sublime from the current directory (`00-a-tested-function`) in your **local** terminal. Make your changes, save them, then jump back into your **virtual** terminal to run the test again.
 
 When you see a green-colored "2 passing" message, you've successfully fixed the `linkTo` method, and have completed this exercise.
 
