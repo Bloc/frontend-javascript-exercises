@@ -40,9 +40,11 @@ describe("addProperty", function() {
     expect(challenge.addProperty(teacher, 'favoriteStudent', 'Mark')).to.eql(teacherWithFavoriteStudent);
   });
 
-  it("should return the object when a property exists", function() {
-    expect(challenge.addProperty(teacherWithFavoriteStudent, 'favoriteStudent', 'James')).to.eql(teacherWithFavoriteStudent);
+  it("should return the object without setting a new value when a property exists", function() {
+    teacher.favoriteStudent = teacherWithFavoriteStudent.favoriteStudent
+    expect(challenge.addProperty(teacher, 'favoriteStudent', 'James')).to.eql(teacherWithFavoriteStudent);
   });
+
 });
 
 describe("formLetter", function() {
