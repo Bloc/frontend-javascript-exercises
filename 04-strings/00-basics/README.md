@@ -47,7 +47,7 @@ sliceItAndCombineIt("This is a Test", 0, 4, 1, 2) // returns "Thish".
 
 - Complete the `substringBetweenMatches` function. This function should:
     - Take two strings as arguments. The first string is the one to search, the second is the one to search for
-    - Return the substring between the first match and the second match
+    - Return the substring between the first match and the last match
     - Not include the first match or the last match in the returned substring
     For example:
     
