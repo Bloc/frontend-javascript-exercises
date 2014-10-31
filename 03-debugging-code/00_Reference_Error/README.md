@@ -8,4 +8,4 @@ ReferenceError: hello is not defined
 
 Mocha tried to run invoke the `hello` function but it couldn't find the function definition, because we haven't defined it yet.
 
-Now that you know what the error is caused by, uncomment out the code in `challenge.js` and write a function that will pass the tests. Running `mocha spec.js `in the `03-debugging-code/00_Reference_Error` directory should show that you have two passing tests now.
+Now that you know what the error is caused by, uncomment out the code in `challenge.js` and write a function that will pass the tests. Running `mocha spec.js `in the `03-debugging-code/00_Reference_Error` directory should show that you have three passing tests now.
