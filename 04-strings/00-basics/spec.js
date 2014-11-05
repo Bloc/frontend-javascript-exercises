@@ -95,5 +95,11 @@ describe("substringBetweenMatches", function() {
     result = challenge.substringBetweenMatches(text, "red");
     expect(result).to.eql(" red red red red ");
   });
+
+  it("creates the correct substring for longer words", function() {
+    text = "It's been a great day to play during the great summer";
+    result = challenge.substringBetweenMatches(text, "great");
+    expect(result).to.eql(" day to play during the ");
+  });
 });
 

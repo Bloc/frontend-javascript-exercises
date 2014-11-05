@@ -69,6 +69,12 @@ describe("outsideRanges", function() {
     expect(challenge.outsideRanges(20)).to.be.false;
     expect(challenge.outsideRanges(75)).to.be.false;
   });
+
+  it("should return false for numbers inside range", function() { 
+    expect(challenge.outsideRanges(14)).to.be.false; 
+    expect(challenge.outsideRanges(46)).to.be.false; 
+    expect(challenge.outsideRanges(3)).to.be.false; 
+  }); 
 });
 
 describe("nameAndPrice", function() {
